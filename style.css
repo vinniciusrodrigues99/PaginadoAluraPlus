@@ -1,0 +1,168 @@
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa; 
+}
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+.principal{
+    background-image: url("./assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain; /*para ocupar toda a container */
+    align-items: center;
+    text-align: center;  /*text-align também alinha elementos filhos da div e não somente textos */ 
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50% 50% 50%;
+    
+}
+.container__caixa{
+    margin: 0 6em;
+}
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+    align: top;
+}
+.container__imagem{
+    margin: 1em 0 2em 0;  /* valores em sentido horário */ 
+}
+.container__botao{
+    background-color: var(--botao-azul);
+    color: var(--branco-principal);
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    
+}
+.botao__secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    color: var(--branco-principal);
+    padding: 1em;
+    grid: 10px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 0.8em;
+}
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}    
+.secundario{
+    background-size: contain; /*para ocupar toda a container */
+    align-items: center;
+    text-align: left;
+    margin: 0em 2em 1em 0;  
+}
+.container__secundario-titulo
+{
+    font-family: var(--fonte-principal);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+} 
+.container__secundario-aviso
+{
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cinza-secundario);
+    margin-bottom: 3rem;
+    
+}
+.container__secundario-imagem{
+    margin: 2em 0 2em 5em;  /* valores em sentido horário */ 
+    width: 80%;
+}    
+.secundario__botao{
+    display:inline-block; /*transformou o elemento em linha e ocupa somente o espaço do botão e a quebra de linha. Explicação: Com o inline-block você terá o comportamento de um elemento inline, porém permitindo que altere as margens, altura, largura e padding do seu elemento assim como um elemento do tipo block. Simples, não é mesmo ?*/ 
+    margin-top: 1em;
+}
+.terciario  /* classe para diferenciar a terceira section, pois achei que tava com a margem desalinhada das outras. Obs: sozinho tb */ 
+{
+    margin-bottom:13em;
+}
+.dispositivos{
+     /*fiz por conta própria */ 
+    height: 60vh;
+    text-align: center;
+    margin-bottom: 9em;
+    
+}
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    margin: 5em 0;
+    
+}
+.dispositivos__titulo{
+    font-family: var(--fonte-principal);
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    
+}        
+.dispositivos__itens{
+    font-family: var(--fonte-principal);
+    font-size: 2em;
+    font-weight: 700;
+    margin: 1em 1em 0em 1em;
+    
+}
+.rodape{
+
+    text-align: center;
+    margin-bottom: 6em;
+
+}
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1.4rem;
+    
+}
+.lista__link a{
+    font-family: var(--fonte-principal);
+    font-size: 1em;
+    font-weight: 400;
+    margin: 1em 1em 0em 1em;
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+.rodape__texto{
+    font-family: var(--fonte-principal);
+    font-size: 0.8em; /* Portanto, a principal diferença entre "rem" e "em" é que "rem" é relativo ao tamanho da fonte do elemento raiz, enquanto "em" é relativo ao tamanho da fonte do elemento pai. */ 
+    font-weight: 400;
+    color: var(--cinza-secundario);
+    margin: 2em 7.5em 1.6em 7.5em;
+}
+.lista__link a:hover{
+    color: var(--botao-azul); /* quando eu passar o mouse por cima ao fonte ficará azul, o "a" é uma pseudoclasse que representa o estado de um elemento */ 
+}
+.lista__link a:active{
+    color: purple;
+}
+.container__botao:hover, .secundario__botao:hover, .botao__secundario:hover{  /* aplicando o hover em várias classes */ 
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
